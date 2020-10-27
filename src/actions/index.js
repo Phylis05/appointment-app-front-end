@@ -16,3 +16,8 @@ export const getDoctors = doctors => ({
   type: 'GET_DOCTORS',
   payload: doctors,
 });
+
+export const formErrors = errors => ({
+  type: 'GET_ERRORS',
+  payload: errors,
+});
