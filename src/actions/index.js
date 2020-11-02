@@ -17,7 +17,14 @@ export const getDoctors = doctors => ({
   payload: doctors,
 });
 
+export const getDoctor = doctor => ({
+  type: 'GET_DOCTOR',
+  payload: doctor,
+});
+
 export const formErrors = errors => ({
   type: 'GET_ERRORS',
   payload: errors,
 });
+
+export const resetSelected = () => ({ type: 'RESET' });
