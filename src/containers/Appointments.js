@@ -1,14 +1,14 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import HealthApi from '../api/Api';
+import HospitalAppointment from '../api/Api';
 import Appointment from '../components/Appointment';
 
 const Appointments = () => {
   const dispatch = useDispatch();
 
-  HealthApi.getAllAppointments(dispatch);
+  HospitalAppointment.getAllAppointments(dispatch);
 
-  const appointmentsState = useSelector(state => state.trips);
+  const appointmentsState = useSelector(state => state.appointments);
   const userId = useSelector(state => state.loggedIn.user.id);
 
   const AppointmentFilter = (appointment, Id) => {
