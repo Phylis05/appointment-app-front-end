@@ -1,16 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import {
-//   cityUpper,
-//   dayExtract,
-//   monthExtract,
-//   yearExtract,
-// } from '../../../helpers/appointmentHelper';
 import { Appoint } from '../styles/StyledComponents';
 
 
 const Appointment = ({ AppointmentInfo }) => {
-  const { date, time, location } = AppointmentInfo;
+  // const { date, time, location } = AppointmentInfo;
   return (
     <Appoint>
       <span>
