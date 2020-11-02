@@ -3,18 +3,41 @@ import {
   BrowserRouter as Router, Switch, Route,
 } from 'react-router-dom';
 import LoginForm from './components/LoginForm';
-import SignUpForm from './components/SignupForm';
-import './App.css';
-import Appointments from './containers/Appointments';
+import Registration from './components/SignupForm';
+import LandingPage from './containers/LandingPage';
+import DoctorsCard from './components/DoctorsCard';
+import DoctorList from './components/DoctorList';
+import DoctorDetails from './containers/DoctorDetails';
+import Appointment from './components/Appointment';
 
 function App() {
+  const currentUser = localStorage.getItem('token');
   return (
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/signup" component={SignUpForm} />
+          <Route exact path="/homepage" component={LandingPage}>
+            {currentUser ? <LandingPage /> : <LoginForm />}
+          </Route>
+          <Route path="/signup" component={Registration} />
           <Route path="/login" component={LoginForm} />
-          <Route path="/appointments" component={Appointments} />
+          <Route
+            path="/doctors"
+            exact
+            component={DoctorList}
+          />
+          <Route
+            path="/doctordetails"
+            exact
+            component={DoctorDetails}
+          />
+          <Route path="/doctorsCard" component={DoctorsCard}>
+            {currentUser ? <DoctorsCard /> : <LoginForm />}
+          </Route>
+          <Route path="/appointment" component={Appointment}>
+            {currentUser ? <Appointment /> : <LoginForm />}
+          </Route>
+          <Route path="/"><LoginForm /></Route>
         </Switch>
       </div>
     </Router>
