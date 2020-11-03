@@ -7,7 +7,7 @@ import {
 const NavigationBar = ({ onClick }) => (
   <NavBar>
     <Title>
-      <Span>tiltzin</Span>
+      <Span>Bookings</Span>
       <Brand>&#169;</Brand>
     </Title>
     <div>

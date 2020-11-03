@@ -6,7 +6,7 @@ import styles from '../styles/ApplicationDetails.module.css';
 //   backendLikeChangeAction,
 //   backendLikeCreateAction,
 // } from '../actions/index';
-import GoBack from '../assets/icons/pagePrev.png';
+// import GoBack from '../assets/icons/pagePrev.png';
 
 const DoctorsInfo = ({
   name,
@@ -24,7 +24,8 @@ const DoctorsInfo = ({
             pathname: '/',
           }}
         >
-          <GoBack className={styles.goBack} />
+          Home
+          {/* <GoBack className={styles.goBack} /> */}
         </Link>
       </div>
       <div className={styles.cardContainer}>

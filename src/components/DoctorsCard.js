@@ -1,26 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom'
 // import styles from '../styles/StyledComponents'
 
-const DoctorsCard = ( name) => {
-  // const {
-  //   // avatar,
-  //   name,
-  // } = cardObject;
+const DoctorsCard = ( {cardObject}) => {
+  const {
+    avatar,
+    name,
+  } = cardObject;
   return (
     <div>
-        {/* <img src={avatar} alt="user avatar" /> */}
-        <h2>{name}</h2>   
+      <Link to="/doctor">
+        <img src={avatar} alt="user avatar" />
+        <h2>{name}</h2> 
+      </Link>  
     </div>
    
   )
 };
 
 DoctorsCard.propTypes = {
-  // cardObject: PropTypes.shape({
+  cardObject: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    // avatar: PropTypes.string.isRequired,
-  // }).isRequired,
+    avatar: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default DoctorsCard;

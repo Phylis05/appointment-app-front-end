@@ -1,3 +1,5 @@
+export const AUTHENTICATED = 'authenticated_user';
+
 export const loginUser = userObj => ({
   type: 'LOGIN_USER',
   payload: userObj,
