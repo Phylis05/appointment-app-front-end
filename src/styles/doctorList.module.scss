@@ -10,7 +10,7 @@ a {
   grid-template-rows: [title] 15% [doctordiv] auto;
   margin: auto;
   padding: 100px 0;
-  height: 74%;
+  height: 50%;
 }
 
 .separator {
@@ -56,11 +56,8 @@ a {
 .doctorPic {
   max-width: 100%;
   margin-bottom: 20px;
-  transition: max-width ease-in-out 0.3s;
+  // transition: max-width ease-in-out 0.3s;
 
-  &:hover {
-    max-width: 105%;
-  }
 }
 
 .doctorInfo {
@@ -89,7 +86,7 @@ a {
   opacity: 40%;
 
   &:hover {
-    opacity: 150%;
+    // opacity: 150%;
     cursor: pointer;
   }
 }
