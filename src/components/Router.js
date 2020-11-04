@@ -4,7 +4,7 @@ import LoginForm from './LoginForm';
 // import Activities from '../container/Activities';
 import Navbar from './NavBar';
 // import CreateActivity from './CreateActivity';
-import AllDoctors from './DoctorList';
+import AllDoctors from './DoctorsList';
 // import CreateMeasurement from './CreateMeasurement';
 import PrivateRoute from './PrivateRouter';
 import Signup from './SignupForm';

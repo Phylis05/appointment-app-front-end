@@ -27,7 +27,7 @@ function App() {
             component={DoctorList}
           />
           <Route
-            path="/doctordetails"
+            path="/doctorinfo"
             exact
             component={DoctorDetails}
           />

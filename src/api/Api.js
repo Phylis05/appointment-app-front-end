@@ -45,7 +45,7 @@ const HospitalAppointment = (() => {
   const getAllDoctors = () => async dispatch => {
     const token = localStorage.getItem('token');
     try {
-      const data = await axios.get('https://wicked-goosebumps-55914.herokuapp.com/doctors',
+      const data = await axios.get('https://wicked-goosebumps-55914.herokuapp.com/v1/doctors',
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -60,7 +60,7 @@ const HospitalAppointment = (() => {
   const getDoctor = () => async dispatch => {
     const token = localStorage.getItem('token');
     try {
-      const data = await axios.get('https://wicked-goosebumps-55914.herokuapp.com/doctors/${id}',
+      const data = await axios.get('https://wicked-goosebumps-55914.herokuapp.com/v1/doctors/${id}',
         {
           headers: {
             Authorization: `Bearer ${token}`,
