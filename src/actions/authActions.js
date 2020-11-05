@@ -51,29 +51,24 @@ export function receiveSignUpError(error) {
 export function loginCall(loginInfo) {
   return dispatch => {
     dispatch(requestLogin);
-   const data = axios.post(`${PROD_URL}/auth/login`, loginInfo)
+    const data = axios.post(`${PROD_URL}/auth/login`, loginInfo)
       .then(response => {
-        console.log(response)
         dispatch(receiveLogin(response.data.auth_token));
       }).catch(error => {
-        let err = {error}
-          console.log(err.error);
-        // dispatch(receiveLoginError(error.response.message));
+        dispatch(receiveLoginError(error.response.message));
       });
-      return data;
+    return data;
   };
 }
 
 export function signUpCall(signUpInfo) {
   return dispatch => {
     dispatch(requestSignUp);
-      return axios.post(`${PROD_URL}/signup`, signUpInfo)
+    return axios.post(`${PROD_URL}/signup`, signUpInfo)
       .then(response => {
         dispatch(receiveSignUp(response.data.auth_token));
       }).catch(error => {
-        let err = {error}
-    console.log(err.error);
-        // dispatch(receiveSignUpError(error.response.data.message));
+        dispatch(receiveSignUpError(error.response.data.message));
       });
   };
 }

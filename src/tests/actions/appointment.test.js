@@ -1,13 +1,20 @@
-import { setAppointments, postAppointment, postAppointmentError, getAppointments, getAppointmentsSuccess, getAppointmentsError } from '../../actions/apptActions';
+import {
+  setAppointments,
+  postAppointment,
+  postAppointmentError,
+  getAppointments,
+  getAppointmentsSuccess,
+  getAppointmentsError,
+} from '../../actions/apptActions';
 
 describe('request appointments', () => {
   const list = 'list';
-  const error = 'error'
+  const error = 'error';
 
   it('should set appointments', () => {
     const expectedAction = {
       type: 'SET_APPOINTMENTS',
-      list
+      list,
     };
     expect(setAppointments(list)).toEqual(expectedAction);
   });

@@ -1,8 +1,16 @@
-import { setToken, requestLogin, receiveLogin, receiveLoginError, requestSignUp, receiveSignUp, receiveSignUpError } from '../../actions/authActions';
+import {
+  setToken,
+  requestLogin,
+  receiveLogin,
+  receiveLoginError,
+  requestSignUp,
+  receiveSignUp,
+  receiveSignUpError,
+} from '../../actions/authActions';
 
 describe('request appointments', () => {
   const authToken = 'authToken';
-  const error = 'error'
+  const error = 'error';
 
   it('should sets up authentication token', () => {
     const expectedAction = {

@@ -50,7 +50,7 @@ export class AppointmentList extends Component {
       return (<Redirect to="/" />);
     }
 
-    const { appointments } = this.props;
+    const { appointments } = this.state;
     return (
       <div className={appClasses.mainDiv}>
         <div className={appClasses.bgImage} />
