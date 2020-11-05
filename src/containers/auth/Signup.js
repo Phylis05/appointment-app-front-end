@@ -51,7 +51,7 @@ class Signup extends Component {
         <h1 className={signupClasses.mainTitle}>
           Welcome to the best resource
           <br />
-          of teachers on the web!
+          of doctors on the web!
         </h1>
         <form className={signupClasses.formDiv} onSubmit={this.handleSubmit}>
           <input type="name" name="name" placeholder="Name" value={name} onChange={this.handleChange} required />

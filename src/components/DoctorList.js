@@ -6,18 +6,18 @@ import { connect } from 'react-redux';
 import doctorClasses from '../styles/doctorList.module.scss';
 import twitter from '../img/twitter.png';
 import fb from '../img/facebook.png';
-import { doctorsCall, receiveDoctors } from '../actions/doctorsActions';
+import { getDoctors, receiveDoctors } from '../actions/doctorsActions';
 import { setToken } from '../actions/authActions';
 import { checkToken } from '../helpers/token';
 
 export class DoctorList extends Component {
   componentDidMount() {
-    const { doctorsCall, setToken } = this.props;
+    const { getDoctors, setToken } = this.props;
     const tokenObj = JSON.parse(localStorage.getItem('tokenObj'));
     setToken(tokenObj.token);
     const { authToken } = this.props;
     if (authToken) {
-      doctorsCall(authToken);
+      getDoctors(authToken);
     }
   }
 
@@ -38,7 +38,7 @@ export class DoctorList extends Component {
 
         <div className={doctorClasses.title}>
           <h1 className={doctorClasses.mainTitle}>Best Doctors</h1>
-          <h2 className={doctorClasses.subTitle}>Choose your teacher</h2>
+          <h2 className={doctorClasses.subTitle}>Choose one of our best</h2>
           <div className={doctorClasses.divisor}>
             <p>************</p>
           </div>
@@ -79,13 +79,13 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  doctorsCall: token => dispatch(doctorsCall(token)),
+  getDoctors: token => dispatch(getDoctors(token)),
   receiveDoctors: response => dispatch(receiveDoctors(response.data)),
   setToken: token => dispatch(setToken(token)),
 });
 
 DoctorList.propTypes = {
-  doctorsCall: PropTypes.func.isRequired,
+  getDoctors: PropTypes.func.isRequired,
   setToken: PropTypes.func.isRequired,
   authToken: PropTypes.string.isRequired,
   doctors: PropTypes.arrayOf(PropTypes.object).isRequired,

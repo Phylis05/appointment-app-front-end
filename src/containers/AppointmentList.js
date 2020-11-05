@@ -1,7 +1,7 @@
 /* eslint-disable no-alert */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Loader from 'react-loader-spinner';
 import appClasses from '../styles/appointmentList.module.scss';
@@ -50,7 +50,7 @@ export class AppointmentList extends Component {
       return (<Redirect to="/" />);
     }
 
-    const { appointments } = this.state;
+    const { appointments } = this.props;
     return (
       <div className={appClasses.mainDiv}>
         <div className={appClasses.bgImage} />

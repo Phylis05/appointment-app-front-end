@@ -53,27 +53,24 @@ export class Doctor extends Component {
           <h1 className={doctorClasses.doctorName}>{doctor.name}</h1>
           <div>
             <div className={`${doctorClasses.doctorInfo} ${doctorClasses.doctorInfo__gray}`}>
-              <p className={`${doctorClasses.doctorInfo__title}`}>Started:</p>
+              <p className={`${doctorClasses.doctorInfo__title}`}>Practice from:</p>
               <p className={`${doctorClasses.doctorInfo__text}`}>
                 {doctor.practice_from}
               </p>
             </div>
             <div className={doctorClasses.doctorInfo}>
-              <p className={`${doctorClasses.doctorInfo__title}`}>Years of experience</p>
+              <p className={`${doctorClasses.doctorInfo__title}`}>Specialization:</p>
               <p className={doctorClasses.doctorInfo__text}>
                 {doctor.specialization}
               </p>
             </div>
             <div className={`${doctorClasses.doctorInfo} ${doctorClasses.doctorInfo__gray}`}>
-              <p className={`${doctorClasses.doctorInfo__title}`}>Subject</p>
+              {/* <p className={`${doctorClasses.doctorInfo__title}`}>Professional Statement</p> */}
               <p className={`${doctorClasses.doctorInfo__text}`}>
                 {doctor.professional_statement}
               </p>
             </div>
           </div>
-          {/* <p className={doctorClasses.doctorInfo__text}>
-            {doctor.about}
-          </p> */}
           <Link
             to={{
               pathname: '/appointments/new',
@@ -81,7 +78,7 @@ export class Doctor extends Component {
             }}
             className={doctorClasses.appointmentButton}
           >
-            Schedule a class
+            Book Appointment
           </Link>
         </div>
       </div>

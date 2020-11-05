@@ -45,7 +45,7 @@ export const initApptState = {
   list: [
     {
       id: 1,
-      location: 'London',
+      location: 'Eldoret',
       doctor_id: 1,
       canceled: false,
       created_at: '2020-06-08 16:51:35',
@@ -56,7 +56,7 @@ export const initApptState = {
     },
     {
       id: 2,
-      location: 'Mexico City',
+      location: 'Kisumu',
       doctor_id: 1,
       canceled: false,
       created_at: '2020-06-08 16:51:35',
@@ -67,7 +67,7 @@ export const initApptState = {
     },
     {
       id: 3,
-      location: 'Mexico City',
+      location: 'Nairobi',
       doctor_id: 1,
       canceled: false,
       created_at: '2020-06-08 16:51:35',
@@ -78,7 +78,7 @@ export const initApptState = {
     },
     {
       id: 4,
-      location: 'Mexico City',
+      location: 'Mombasa',
       doctor_id: 1,
       canceled: false,
       created_at: '2020-06-08 16:51:35',

@@ -69,20 +69,18 @@ export class Appointment extends Component {
     return (
       <div className={appClasses.mainDiv}>
         <div className={appClasses.bgImage} />
-        <h1 className={appClasses.mainTitle}>Book a class with your teacher</h1>
+        <h1 className={appClasses.mainTitle}>Book an appointment with us</h1>
         <div className={appClasses.divisor} />
         <div className={appClasses.textDiv}>
-          <p>Please select your city and the preferred date</p>
+          <p>Kindly select your city and the preferred date</p>
           <p>We will inform you if the doctor is available</p>
-          <p>You can check your appointments on the Navbar Menu</p>
-          <p>If you wish to cancel your appointment, please do so in advance</p>
         </div>
         <div className={appClasses.buttons}>
           <select className={appClasses.input} name="location" id="place-selector" onChange={this.handleChange}>
-            <option value="london">London</option>
-            <option value="new york">New York</option>
-            <option value="mexico city">Mexico City</option>
-            <option value="rwanda">Rwanda</option>
+            <option value="eldoret">Eldoret</option>
+            <option value="nairobi">Nairobi</option>
+            <option value="Mombasa">Mombasa</option>
+            <option value="nakuru">Nakuru</option>
           </select>
           <DatePicker
             name="date"

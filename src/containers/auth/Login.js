@@ -50,7 +50,7 @@ class Login extends Component {
         <h1 className={loginClasses.mainTitle}>
           Welcome to the best resource
           <br />
-          of teachers on the web!
+          of doctors on the web!
         </h1>
         <form className={loginClasses.formDiv} onSubmit={this.handleSubmit}>
           <input type="email" name="email" placeholder="Email" value={email} onChange={this.handleChange} required />

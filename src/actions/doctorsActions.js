@@ -41,7 +41,7 @@ export function getDoctorError(error) {
   };
 }
 
-export function doctorsCall(token) {
+export function getDoctors(token) {
   return dispatch => {
     dispatch(requestDoctors());
     return axios.get(`${PROD_URL}/v1/doctors`, {
