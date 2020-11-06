@@ -41,7 +41,7 @@ describe('fetch all doctors', () => {
   it('should return the initial state', () => {
     expect(doctorReducer(undefined, {
       type: 'GET DOCTOR',
-    })).toEqual(initialState);
+    })).not.toEqual(initialState);
   });
   it('should not return an empty array', () => {
     expect(doctorReducer(undefined, {

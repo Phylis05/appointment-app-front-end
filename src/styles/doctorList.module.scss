@@ -9,8 +9,8 @@ a {
   grid-template-columns: [space1] 12% [doctor1] 25% [doctor2] 25% [doctor3] 25% [space2] auto;
   grid-template-rows: [title] 15% [doctordiv] auto;
   margin: auto;
-  padding: 100px 0;
-  height: 50%;
+  padding: 0;
+  height: 100%;
 }
 
 .separator {

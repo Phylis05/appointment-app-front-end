@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { PROD_URL } from '../helpers/constants';
+import { DEV_URL } from '../helpers/constants';
 
 export function setAppointments(list) {
   return {
@@ -43,7 +43,7 @@ export function getAppointmentsError(error) {
 export function apptCall(token) {
   return dispatch => {
     dispatch(getAppointments());
-    return axios.get(`${PROD_URL}/appointments`, {
+    return axios.get(`${DEV_URL}/v1/appointments`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -58,7 +58,7 @@ export function apptCall(token) {
 export function postApptCall(token, data) {
   return dispatch => {
     dispatch(postAppointment());
-    return axios.post(`${PROD_URL}/appointments/new`,
+    return axios.post(`${DEV_URL}/v1/appointments/new`,
       data,
       {
         headers: {

@@ -15,7 +15,7 @@ export class Appointment extends Component {
     const { doctorId } = history.location;
 
     this.state = {
-      location: 'london',
+      location: 'Nairobi',
       date: new Date(),
       doctorId,
 
@@ -68,7 +68,6 @@ export class Appointment extends Component {
 
     return (
       <div className={appClasses.mainDiv}>
-        <div className={appClasses.bgImage} />
         <h1 className={appClasses.mainTitle}>Book an appointment with us</h1>
         <div className={appClasses.divisor} />
         <div className={appClasses.textDiv}>

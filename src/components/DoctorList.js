@@ -39,9 +39,6 @@ export class DoctorList extends Component {
         <div className={doctorClasses.title}>
           <h1 className={doctorClasses.mainTitle}>Best Doctors</h1>
           <h2 className={doctorClasses.subTitle}>Choose one of our best</h2>
-          <div className={doctorClasses.divisor}>
-            <p>************</p>
-          </div>
         </div>
         <div className={doctorClasses.prevButton}>
           <span>&lt;</span>
@@ -52,10 +49,6 @@ export class DoctorList extends Component {
               <img className={doctorClasses.doctorPic} src={doctor.img} alt="Doctor profile" />
               <div className={doctorClasses.doctorInfo}>
                 <p className={doctorClasses.doctorName}>{doctor.name}</p>
-                <div className={doctorClasses.divisor}>
-                  <p>************</p>
-                </div>
-                <p className={doctorClasses.about}>{doctor.about}</p>
               </div>
             </Link>
             <div className={doctorClasses.socialDiv}>

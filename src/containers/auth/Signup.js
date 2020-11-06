@@ -47,7 +47,6 @@ class Signup extends Component {
 
     return (
       <div className={`${signupClasses.mainDiv} ${signupClasses.mainDiv__yellow}`}>
-        <div className={signupClasses.bgImage} />
         <h1 className={signupClasses.mainTitle}>
           Welcome to the best resource
           <br />
