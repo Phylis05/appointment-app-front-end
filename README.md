@@ -29,7 +29,7 @@ The main features you will find here are:
 ## Live Demo
 
 You can find the complete and functional app here:
-[Live Demo Link](https://phylis05.github.io/appointment-app-front-end/)
+[Live Link](https://phylis05.github.io/appointment-app-front-end/)
 
 ## Setup
 
