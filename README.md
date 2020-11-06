@@ -5,6 +5,7 @@ The purpose of the project is to create a Full-Stack app that works with a backe
 This repo contains the frontend project.
 It's a React app that works as an interface to handle connections to the backend API.
 The main features you will find here are:
+
 - Create and authenticate users
 - Get a list of available doctors
 - Make an appointment with a doctor
@@ -33,7 +34,7 @@ You can find the complete and functional app here:
 ## Setup
 
 - To get a local copy up and running follow these simple example steps.
-  - Clone the [repo](https://github.com/Phylis05/appointment-app) and cd in it.
+  - Clone the [repo](https://github.com/Phylis05/appointment-app-front-end) and cd in it.
   - Run `npm install` to get all packages installed on your directory
   - Run `npm start` to open the page locally
   - Then, go to the backend repo [here](https://github.com/Phylis05/appointment-app) and follow instructions there.
@@ -42,7 +43,7 @@ You can find the complete and functional app here:
 
 👤 **Phylis Chepchumba**
 
-- Github: [Phylis05](https://github.com/phylis05)
+- Github: [Phylis05](https://github.com/Phylis05)
 - Linkedin: [Phylis Chepchumba](https://linkedin.com/phylis-chepchumba)
 - Twitter: [phylis_chumbaa](https://twitter.com/phyl_chumba)
 - [Email](chumba.phyl@gmail.com)
