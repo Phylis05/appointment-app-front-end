@@ -33,10 +33,10 @@ You can find the complete and functional app here:
 ## Setup
 
 - To get a local copy up and running follow these simple example steps.
-  - Clone the [repo]() and cd in it.
+  - Clone the [repo](https://github.com/Phylis05/appointment-app) and cd in it.
   - Run `npm install` to get all packages installed on your directory
   - Run `npm start` to open the page locally
-  - Then, go to the backend repo [here]() and follow instructions there.
+  - Then, go to the backend repo [here](https://github.com/Phylis05/appointment-app) and follow instructions there.
 
 ## Author
 
