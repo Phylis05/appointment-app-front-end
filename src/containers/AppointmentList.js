@@ -51,6 +51,7 @@ export class AppointmentList extends Component {
     }
 
     const { appointments } = this.state;
+    console.log(appointments);
     return (
       <div className={appClasses.mainDiv}>
         <div className={appClasses.bgImage} />
@@ -80,8 +81,8 @@ export class AppointmentList extends Component {
 
 const mapStateToProps = state => ({
   authToken: state.auth.authToken,
-  appointments: state.appt.list,
-  fetching: state.appt.fetching,
+  appointments: state.appointments.list,
+  fetching: state.appointments.fetching,
   doctors: state.doctors.list,
 });
 

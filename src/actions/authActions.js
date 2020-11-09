@@ -53,9 +53,10 @@ export function loginCall(loginInfo) {
     dispatch(requestLogin);
     const data = axios.post(`${PROD_URL}/auth/login`, loginInfo)
       .then(response => {
+        console.log(response);
         dispatch(receiveLogin(response.data.auth_token));
       }).catch(error => {
-        dispatch(receiveLoginError(error.response.message));
+        dispatch(receiveLoginError(error.message));
       });
     return data;
   };
@@ -68,7 +69,7 @@ export function signUpCall(signUpInfo) {
       .then(response => {
         dispatch(receiveSignUp(response.data.auth_token));
       }).catch(error => {
-        dispatch(receiveSignUpError(error.response.data.message));
+        dispatch(receiveSignUpError(error.message));
       });
   };
 }

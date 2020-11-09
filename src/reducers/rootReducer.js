@@ -5,16 +5,8 @@ import doctorsReducer from './doctorsReducer';
 
 const rootReducer = combineReducers({
   auth: authReducer,
-  appt: apptReducer,
+  appointments: apptReducer,
   doctors: doctorsReducer,
 });
 
 export default rootReducer;
-// import { combineReducers } from 'redux';
-// import mainReducer from './index';
-
-// const rootReducer = combineReducers({
-//   mainReducer,
-// });
-
-// export default rootReducer;

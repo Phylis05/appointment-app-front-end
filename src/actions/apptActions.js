@@ -41,6 +41,7 @@ export function getAppointmentsError(error) {
 }
 
 export function apptCall(token) {
+  console.log('something');
   return dispatch => {
     dispatch(getAppointments());
     return axios.get(`${DEV_URL}/v1/appointments`, {
@@ -48,6 +49,7 @@ export function apptCall(token) {
         Authorization: `Bearer ${token}`,
       },
     }).then(response => {
+      console.log(response);
       dispatch(getAppointmentsSuccess(response.data));
     }).catch(error => {
       dispatch(getAppointmentsError(error));

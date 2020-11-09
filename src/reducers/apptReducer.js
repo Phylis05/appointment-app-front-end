@@ -1,6 +1,6 @@
 import { initApptState } from '../helpers/initStates';
 
-const apptReducer = (state = [initApptState], action) => {
+const apptReducer = (state = initApptState, action) => {
   switch (action.type) {
     case 'SET_APPOINTMENTS':
       return {
