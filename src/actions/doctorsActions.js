@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { PROD_URL } from '../helpers/constants';
+import { DEV_URL } from '../helpers/constants';
 
 export function requestDoctors() {
   return {
@@ -44,7 +44,7 @@ export function getDoctorError(error) {
 export function getDoctors(token) {
   return dispatch => {
     dispatch(requestDoctors());
-    return axios.get(`${PROD_URL}/v1/doctors`, {
+    return axios.get(`${DEV_URL}/v1/doctors`, {
       headers: { Authorization: `Bearer ${token}` },
     }).then(response => {
       dispatch(receiveDoctors(response.data));
@@ -57,7 +57,7 @@ export function getDoctors(token) {
 export function fetchDoctor(id, token) {
   return dispatch => {
     dispatch(getDoctor());
-    return axios.get(`${PROD_URL}/v1/doctors/${id}`, {
+    return axios.get(`${DEV_URL}/v1/doctors/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     }).then(response => {
       dispatch(getDoctorSuccess(response.data));
