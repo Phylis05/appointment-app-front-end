@@ -39,9 +39,6 @@ export class DoctorList extends Component {
         <div className={doctorClasses.title}>
           <h1 className={doctorClasses.mainTitle}>Best Doctors</h1>
           <h2 className={doctorClasses.subTitle}>Choose one of our best</h2>
-          <div className={doctorClasses.divisor}>
-            <p>************</p>
-          </div>
         </div>
         <div className={doctorClasses.prevButton}>
           <span>&lt;</span>
@@ -49,18 +46,15 @@ export class DoctorList extends Component {
         {doctors.map(doctor => (
           <div key={doctor.id} className={doctorClasses.doctorDiv}>
             <Link to={`/doctors/${doctor.id}`}>
-              <img className={doctorClasses.doctorPic} src={doctor.img} alt="Doctor profile" />
+              <img className={doctorClasses.doctorImage} src={doctor.img} alt="Doctor profile" />
               <div className={doctorClasses.doctorInfo}>
                 <p className={doctorClasses.doctorName}>{doctor.name}</p>
-                <div className={doctorClasses.divisor}>
-                  <p>************</p>
-                </div>
                 <p className={doctorClasses.about}>{doctor.about}</p>
               </div>
             </Link>
-            <div className={doctorClasses.socialDiv}>
-              <img className={doctorClasses.socialIcon} src={twitter} alt="twitter logo" />
-              <img className={doctorClasses.socialIcon} src={fb} alt="Facebook logo" />
+            <div className={doctorClasses.iconDiv}>
+              <img className={doctorClasses.docIcon} src={twitter} alt="twitter logo" />
+              <img className={doctorClasses.docIcon} src={fb} alt="Facebook logo" />
             </div>
           </div>
         ))}

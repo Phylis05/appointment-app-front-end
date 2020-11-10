@@ -1,4 +1,4 @@
-import apptReducer from '../../reducers/apptReducer';
+import appointmentReducer from '../../reducers/appointmentReducer';
 
 describe('fetch all appointments', () => {
   const initialState = [{
@@ -16,13 +16,13 @@ describe('fetch all appointments', () => {
   }];
 
   it('should return the initial state', () => {
-    expect(apptReducer(undefined, {
+    expect(appointmentReducer(undefined, {
       type: 'SET APPOINTMENT',
     })).toEqual(initialState);
   });
 
   it('should not return an empty array', () => {
-    expect(apptReducer(undefined, {
+    expect(appointmentReducer(undefined, {
       type: 'SET APPOINTMENT',
     })).not.toEqual([]);
   });

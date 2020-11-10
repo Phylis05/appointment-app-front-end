@@ -53,7 +53,6 @@ export function loginCall(loginInfo) {
     dispatch(requestLogin);
     const data = axios.post(`${PROD_URL}/auth/login`, loginInfo)
       .then(response => {
-        console.log(response);
         dispatch(receiveLogin(response.data.auth_token));
       }).catch(error => {
         dispatch(receiveLoginError(error.message));

@@ -10,14 +10,6 @@
   color: $white-title-color;
 }
 
-.bgImage {
-  // position: absolute;
-  // top: 0;
-  // height: 100%;
-  // width: 100%;
-  // opacity: 0.2;
-}
-
 .appointmentsDiv {
   z-index: 1;
   display: flex;
@@ -43,7 +35,7 @@
   padding: 10px;
 }
 
-.appElement {
+.appointItem {
   margin: 5px;
   font-weight: bold;
 }

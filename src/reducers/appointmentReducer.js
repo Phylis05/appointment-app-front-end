@@ -1,6 +1,6 @@
-import { initApptState } from '../helpers/initStates';
+import { initappointmentState } from '../helpers/initStates';
 
-const apptReducer = (state = initApptState, action) => {
+const appointmentReducer = (state = initappointmentState, action) => {
   switch (action.type) {
     case 'SET_APPOINTMENTS':
       return {
@@ -31,8 +31,8 @@ const apptReducer = (state = initApptState, action) => {
     case 'GET_APPOINTMENTS_SUCCESS':
       return {
         ...state,
-        list: action.list,
         fetching: false,
+        list: action.list,
       };
 
     case 'GET_APPOINTMENTS_ERROR':
@@ -47,4 +47,4 @@ const apptReducer = (state = initApptState, action) => {
   }
 };
 
-export default apptReducer;
+export default appointmentReducer;

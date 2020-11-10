@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import appClasses from '../styles/appointment.module.scss';
-import { postApptCall } from '../actions/apptActions';
+import { postappointmentCall } from '../actions/appointmentActions';
 import { checkToken } from '../helpers/token';
 
 export class Appointment extends Component {
@@ -49,12 +49,12 @@ export class Appointment extends Component {
       doctor_id: doctorId,
     };
 
-    const { history, postAppt } = this.props;
+    const { history, postappointment } = this.props;
     const validToken = checkToken();
     if (validToken) {
       const tokenObj = JSON.parse(localStorage.getItem('tokenObj'));
       const { token } = tokenObj;
-      postAppt(token, data).then(() => {
+      postappointment(token, data).then(() => {
         history.push('/appointments');
       });
     }
@@ -102,11 +102,11 @@ export class Appointment extends Component {
 
 const mapStateToProps = state => ({
   authToken: state.auth.authToken,
-  appointments: state.appt.appointments,
+  appointments: state.appointments.appointments,
 });
 
 const mapDispatchToProps = dispatch => ({
-  postAppt: (token, data) => dispatch(postApptCall(token, data)),
+  postappointment: (token, data) => dispatch(postappointmentCall(token, data)),
 });
 
 Appointment.propTypes = {
@@ -116,7 +116,7 @@ Appointment.propTypes = {
       doctorId: PropTypes.number.isRequired,
     }),
   }).isRequired,
-  postAppt: PropTypes.func.isRequired,
+  postappointment: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Appointment);

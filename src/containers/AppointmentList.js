@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import Loader from 'react-loader-spinner';
 import appClasses from '../styles/appointmentList.module.scss';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
-import { apptCall } from '../actions/apptActions';
+import { appointmentCall } from '../actions/appointmentActions';
 import { checkToken } from '../helpers/token';
 
 export class AppointmentList extends Component {
@@ -23,8 +23,8 @@ export class AppointmentList extends Component {
     const tokenObj = JSON.parse(localStorage.getItem('tokenObj'));
     const { token } = tokenObj;
     if (validToken) {
-      const { apptCall } = this.props;
-      apptCall(token).then(() => {
+      const { appointmentCall } = this.props;
+      appointmentCall(token).then(() => {
         const { appointments } = this.props;
         this.setState({ appointments });
       });
@@ -51,7 +51,6 @@ export class AppointmentList extends Component {
     }
 
     const { appointments } = this.state;
-    console.log(appointments);
     return (
       <div className={appClasses.mainDiv}>
         <div className={appClasses.bgImage} />
@@ -59,15 +58,15 @@ export class AppointmentList extends Component {
         <div className={appClasses.appointmentsDiv}>
           {appointments.map(appointment => (
             <ul className={appClasses.appointment} key={appointment.id}>
-              <li className={`${appClasses.doctor} ${appClasses.appElement}`}>
+              <li className={`${appClasses.doctor} ${appClasses.appointItem}`}>
                 Doctor:
                 <span className={appClasses.spanInfo}>{appointment.doctor_id}</span>
               </li>
-              <li className={`${appClasses.location} ${appClasses.appElement}`}>
+              <li className={`${appClasses.location} ${appClasses.appointItem}`}>
                 Location:
                 <span className={appClasses.spanInfo}>{appointment.location}</span>
               </li>
-              <li className={`${appClasses.date} ${appClasses.appElement}`}>
+              <li className={`${appClasses.date} ${appClasses.appointItem}`}>
                 Date:
                 <span className={appClasses.spanInfo}>{appointment.date}</span>
               </li>
@@ -87,11 +86,11 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  apptCall: token => dispatch(apptCall(token)),
+  appointmentCall: token => dispatch(appointmentCall(token)),
 });
 
 AppointmentList.propTypes = {
-  apptCall: PropTypes.func.isRequired,
+  appointmentCall: PropTypes.func.isRequired,
   fetching: PropTypes.bool.isRequired,
   appointments: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

@@ -13,17 +13,6 @@ a {
   height: 100%;
 }
 
-.separator {
-  grid-column: space1;
-}
-
-.divisor {
-  color: $dark-gray-color;
-  padding: 20px 0;
-  font-size: 0.8rem;
-  opacity: 40%;
-}
-
 .doctorDiv,
 .doctorInfo {
   display: flex;
@@ -53,10 +42,9 @@ a {
   color: $dark-gray-color;
 }
 
-.doctorPic {
-  max-width: 100%;
+.doctorImage {
+  max-width: 80%;
   margin-bottom: 20px;
-  // transition: max-width ease-in-out 0.3s;
 }
 
 .doctorInfo {
@@ -72,27 +60,26 @@ a {
   color: black;
 }
 
-.socialDiv {
+.iconDiv {
   grid-row: social;
   display: flex;
   justify-content: center;
 }
 
-.socialIcon {
-  width: 20px;
+.docIcon {
+  width: 25px;
   height: 20px;
   margin: 0 10px;
-  opacity: 40%;
+  opacity: 50%;
 
   &:hover {
-    // opacity: 150%;
     cursor: pointer;
   }
 }
 
 .about {
   overflow: hidden;
-  height: 7.9rem;
+  height: 2rem;
   line-height: 1rem;
   text-align: center;
   font-size: 0.9rem;

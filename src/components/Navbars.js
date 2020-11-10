@@ -35,7 +35,7 @@ export default class Navbar extends Component {
 
   render() {
     const { visible } = this.state;
-    const visibleClass = visible ? navClasses.navToggle__visible : navClasses.navToggle__invisible;
+    const visibleClass = visible ? navClasses.navToggle__visible : navClasses.navToggle__hidden;
 
     return (
       <div className={navClasses.navbar}>
@@ -48,12 +48,12 @@ export default class Navbar extends Component {
             <li className={navClasses.navItem}><Link to="/auth/login" className={navClasses.navItem} onClick={this.handleLogOut}>Log out</Link></li>
             <li className={navClasses.navItem}><Link to="/appointments" className={navClasses.navItem} onClick={this.handleToggle}>Appointments</Link></li>
           </ul>
-          <div className={navClasses.socialDiv}>
-            <img className={navClasses.socialIcon} src={twitter} alt="twitter logo" />
-            <img className={navClasses.socialIcon} src={fb} alt="Facebook logo" />
-            <img className={navClasses.socialIcon} src={google} alt="Google logo" />
-            <img className={navClasses.socialIcon} src={vimeo} alt="vimeo logo" />
-            <img className={navClasses.socialIcon} src={pinterest} alt="pinterest logo" />
+          <div className={navClasses.iconDiv}>
+            <img className={navClasses.navIcon} src={twitter} alt="twitter logo" />
+            <img className={navClasses.navIcon} src={fb} alt="Facebook logo" />
+            <img className={navClasses.navIcon} src={google} alt="Google logo" />
+            <img className={navClasses.navIcon} src={vimeo} alt="vimeo logo" />
+            <img className={navClasses.navIcon} src={pinterest} alt="pinterest logo" />
           </div>
         </div>
       </div>

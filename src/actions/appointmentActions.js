@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import axios from 'axios';
 import { DEV_URL } from '../helpers/constants';
 
@@ -40,27 +41,25 @@ export function getAppointmentsError(error) {
   };
 }
 
-export function apptCall(token) {
-  console.log('something');
+export function appointmentCall(token) {
   return dispatch => {
     dispatch(getAppointments());
     return axios.get(`${DEV_URL}/v1/appointments`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
+      headers: { Authorization: `Bearer ${token}` },
     }).then(response => {
-      console.log(response);
+      console.log(response, 'value');
       dispatch(getAppointmentsSuccess(response.data));
     }).catch(error => {
+      console.log(error);
       dispatch(getAppointmentsError(error));
     });
   };
 }
 
-export function postApptCall(token, data) {
+export function postappointmentCall(token, data) {
   return dispatch => {
     dispatch(postAppointment());
-    return axios.post(`${DEV_URL}/v1/appointments/new`,
+    return axios.post(`${DEV_URL}/v1/appointments`,
       data,
       {
         headers: {

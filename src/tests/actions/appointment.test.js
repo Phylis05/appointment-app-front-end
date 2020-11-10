@@ -5,7 +5,7 @@ import {
   getAppointments,
   getAppointmentsSuccess,
   getAppointmentsError,
-} from '../../actions/apptActions';
+} from '../../actions/appointmentActions';
 
 describe('request appointments', () => {
   const list = 'list';
