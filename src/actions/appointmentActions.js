@@ -47,10 +47,8 @@ export function appointmentCall(token) {
     return axios.get(`${DEV_URL}/v1/appointments`, {
       headers: { Authorization: `Bearer ${token}` },
     }).then(response => {
-      console.log(response, 'value');
       dispatch(getAppointmentsSuccess(response.data));
     }).catch(error => {
-      console.log(error);
       dispatch(getAppointmentsError(error));
     });
   };
