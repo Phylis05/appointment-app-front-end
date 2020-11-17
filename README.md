@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Booking Appointments App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This is the final [Microverse's](www.microverse.org) capstone project!!
+The purpose of the project is to create a Full-Stack app that works with a backend in Rails and a Frontend in React.
+This repo contains the frontend project.
+It's a React app that works as an interface to handle connections to the backend API.
+The main features you will find here are:
 
-## Available Scripts
+- Create and authenticate users
+- Get a list of available doctors
+- Make an appointment with a doctor
+- Show the list of the user's appointments
+- Navigation through side navbar
 
-In the project directory, you can run:
+## Built With
 
-### `yarn start`
+- React
+- React Hooks
+- Redux
+- React Redux
+- Redux Thunk
+- prop-types
+- Eslint
+- Stylelint
+- NPM
+- Github
+- Heroku
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Live Demo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+You can find the complete and functional app here:
+[Live Link](https://afternoon-sierra-83060.herokuapp.com/)
 
-### `yarn test`
+## Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- To get a local copy up and running follow these simple example steps.
+  - Clone the [repo](https://github.com/Phylis05/appointment-app-front-end) and cd in it.
+  - Run `npm install` to get all packages installed on your directory
+  - Run `npm start` to open the page locally
+  - Then, go to the backend repo [here](https://github.com/Phylis05/appointment-app) and follow instructions there.
 
-### `yarn build`
+## Author
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+👤 **Phylis Chepchumba**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Github: [Phylis05](https://github.com/Phylis05)
+- Linkedin: [Phylis Chepchumba](https://linkedin.com/phylis-chepchumba)
+- Twitter: [phylis_chumbaa](https://twitter.com/phyl_chumba)
+- [Email](chumba.phyl@gmail.com)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Credits
 
-### `yarn eject`
+Thanks to [Gregoire Vella and others on Behance](https://www.behance.net/muratk) for his awesome design work. I based my work on  [this](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) design.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🤝 Contributing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contributions, issues and feature requests are welcome!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Feel free to check the [issues page](https://github.com/Phylis05/appointment-app-front-end/issues).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Show your support
 
-## Learn More
+Give a ⭐️ if you like this project!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Acknowledgments
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- This project is part of the React Microverse Curriculum
 
-### Code Splitting
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](lic.url) licensed.

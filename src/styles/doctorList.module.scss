@@ -1,0 +1,117 @@
+@import 'variables';
+
+a {
+  text-decoration: none;
+}
+
+.mainDiv {
+  display: grid;
+  grid-template-columns: [space1] 12% [doctor1] 25% [doctor2] 25% [doctor3] 25% [space2] auto;
+  grid-template-rows: [title] 15% [doctordiv] auto;
+  margin: auto;
+  padding: 0;
+  height: 100%;
+}
+
+.doctorDiv,
+.doctorInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  grid-row: doctorDiv;
+  text-decoration: none;
+}
+
+.title {
+  text-align: center;
+  grid-column: doctor2;
+}
+
+.mainTitle {
+  font-family: 'Baloo Paaji 2', cursive;
+  font-weight: 700;
+  font-size: 2.3rem;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.subTitle {
+  color: $dark-gray-color;
+}
+
+.doctorImage {
+  max-width: 80%;
+  margin-bottom: 20px;
+}
+
+.doctorInfo {
+  height: 25%;
+  align-content: space-around;
+}
+
+.doctorName {
+  font-family: 'Baloo Paaji 2', cursive;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.3rem;
+  color: black;
+}
+
+.iconDiv {
+  grid-row: social;
+  display: flex;
+  justify-content: center;
+}
+
+.docIcon {
+  width: 25px;
+  height: 20px;
+  margin: 0 10px;
+  opacity: 50%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.about {
+  overflow: hidden;
+  height: 2rem;
+  line-height: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: silver;
+}
+
+.nextButton {
+  grid-row: doctorDiv;
+  grid-column: space2;
+  background: $green-color;
+  border-radius: 120px 0 0 120px;
+  margin-left: 30px;
+}
+
+.prevButton {
+  grid-row: doctorDiv;
+  grid-column: space1;
+  background: $gray-color;
+  border-radius: 0 120px 120px 0;
+  margin-right: 30px;
+}
+
+.nextButton,
+.prevButton {
+  align-self: center;
+  padding: 10px 20px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 2.5rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

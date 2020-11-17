@@ -1,0 +1,46 @@
+@import 'variables';
+
+.mainDiv {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: $blue-color;
+  color: $white-title-color;
+}
+
+.appointmentsDiv {
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 100px;
+}
+
+.mainTitle {
+  margin: 100px 100px 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.appointment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 40px 20px;
+  width: 200px;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.appointItem {
+  margin: 5px;
+  font-weight: bold;
+}
+
+.spanInfo {
+  margin-left: 20px;
+  text-align: right;
+}
